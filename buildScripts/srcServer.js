@@ -13,7 +13,7 @@ import config from '../webpack.config.dev'
 // var port = 3001;
 // var app = express();
 
-const port = 3001;
+const port = 3000;
 const app = express();
 const compiler = webpack(config);
 

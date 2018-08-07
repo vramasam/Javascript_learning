@@ -19,7 +19,7 @@ describe('Our first test', function() {
 // Using JSDOM test case
 describe('index.html', () =>{
   // done here to avoid asynchronous call
-  it('should say hello', (done) => {
+  it('should say h1 that says Users', (done) => {
     const index = fs.readFileSync('./src/index.html', "utf-8");
     // define JSDOM
     // You can optionally provide an array of Javascript files
