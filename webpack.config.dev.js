@@ -5,9 +5,10 @@ export default {
   debug: true,
   devtool: 'inline-source-map',
   noInfo: false,
-  entry: [
-    path.resolve(__dirname, 'src/index')
-  ],
+  entry:  {
+    vendor : path.resolve(__dirname, 'src/vendor'),
+     main : path.resolve(__dirname, 'src/index')
+  },
   target: 'web',
   output: {
     path: path.resolve(__dirname, 'src'),

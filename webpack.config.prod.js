@@ -13,9 +13,14 @@ export default {
   output: {
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/',
-    filename: 'bundle.js'
+    filename: '[name].js'
   },
   plugins: [
+    // Use CommonChunkPlugin to create a separate bundle
+   // of vendor libraries so that they are cached separatly
+   new webpack.optimize.CommonsChunkPlugin({
+    name: 'vendor'
+   }),
 
     // Creates HTML file that includes reference to bundle JS
     new HtmlWebpackPlugin ({
